@@ -68,6 +68,15 @@ module.exports = function(grunt) {
         files: {
           'tmp/cleanDirection.css': 'test/fixtures/cleanDirection.css',
         }
+      },
+      noFlip: {
+        options: {
+          cleanDirection: 'ltr',
+          noFlip: true
+        },
+        files: {
+          'tmp/noFlip.css': 'test/fixtures/noFlip.css',
+        }
       }
     },
 
