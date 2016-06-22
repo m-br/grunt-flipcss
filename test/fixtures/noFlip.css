@@ -1,0 +1,5 @@
+.sample {
+  color: red;
+  background: green;
+  background: blue; /* !rtl-only */
+}

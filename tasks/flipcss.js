@@ -19,7 +19,8 @@ module.exports = function(grunt) {
       flipPseudo: false,
       flipUrls: true,
       flipSelectors: true,
-      cleanDirection: null
+      cleanDirection: null,
+      noFlip: false
     });
 
     // Iterate over all specified file groups.
@@ -39,7 +40,9 @@ module.exports = function(grunt) {
       }).join(grunt.util.linefeed);
 
       // Flip file.
-      src = flipcss.flip(src, options.warnings, options.flipPseudo, options.flipUrls, options.flipSelectors);
+      if (options.noFlip !== true) {
+        src = flipcss.flip(src, options.warnings, options.flipPseudo, options.flipUrls, options.flipSelectors);
+      }
 
       //clean
       if (options.cleanDirection) {

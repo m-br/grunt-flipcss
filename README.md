@@ -78,6 +78,11 @@ Possible values: `rtl` or `ltr`
 
 see: https://github.com/oyvindeh/flipcss#what-is-done-when-cleaning
 
+#### options.noFlip
+Type: `boolean`
+Default value: `false`
+
+If the flip action should be avoided. It can be used to clean without flipping.
 
 
 ### Usage Examples
