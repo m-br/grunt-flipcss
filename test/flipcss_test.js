@@ -67,5 +67,14 @@ exports.flipcss = {
     test.equal(actual, expected, 'should run flipcss.clean');
 
     test.done();
+  },
+  noFlip: function(test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/noFlip.css');
+    var expected = grunt.file.read('test/expected/noFlip.css');
+    test.equal(actual, expected, 'should run flipcss.clean without flipping');
+
+    test.done();
   }
 };
